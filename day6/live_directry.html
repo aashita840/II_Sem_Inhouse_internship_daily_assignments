@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live User Directory</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<style>
+body{
+    background:#f8f9fa;
+}
+.card{
+    transition:0.3s;
+}
+.card:hover{
+    transform:scale(1.03);
+}
+</style>
+
+</head>
+<body>
+
+<div class="container mt-5">
+
+<h2 id="heading" class="text-center mb-4"></h2>
+
+<div class="row" id="user-container">
+</div>
+
+</div>
+
+<script>
+
+function loadUsers(){
+
+    $("#user-container").html(
+        "<h3 class='text-center'>Loading users...</h3>"
+    );
+
+    fetch("https://jsonplaceholder.typicode.com/users")
+
+    .then(response => response.json())
+
+    .then(data => {
+
+        $("#heading").text("Showing " + data.length + " Users");
+
+        $("#user-container").html("");
+
+        data.forEach(function(user,index){
+
+            let color = (index % 2 == 0) ? "bg-info-subtle" : "";
+
+            $("#user-container").append(`
+
+            <div class="col-md-4 mb-4">
+
+                <div class="card ${color}">
+                    <div class="card-body">
+
+                        <h5>${user.name}</h5>
+
+                        <p><b>Email:</b> ${user.email}</p>
+
+                        <p><b>Company:</b> ${user.company.name}</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            `);
+
+        });
+
+    })
+
+    .catch(function(){
+
+        $("#user-container").html(`
+
+        <div class="alert alert-danger text-center">
+
+            Unable to load users.
+
+            <br><br>
+
+            <button class="btn btn-primary" onclick="loadUsers()">
+                Retry
+            </button>
+
+        </div>
+
+        `);
+
+    });
+
+}
+
+loadUsers();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Foodie's Restaurant</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+    /* Smooth Scrolling */
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    margin:0;
+    padding:0;
+}
+
+/* Navbar */
+.navbar-brand{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.nav-link{
+    margin-left:15px;
+    transition:0.3s;
+}
+
+.nav-link:hover{
+    color:#ffc107 !important;
+}
+
+/* Hero Section */
+.hero{
+    background:#fff8f0;
+    padding:80px 0;
+}
+
+.hero h1{
+    font-size:50px;
+    font-weight:bold;
+    color:#d62828;
+}
+
+.hero p{
+    font-size:18px;
+    margin:20px 0;
+    color:#555;
+}
+
+.hero img{
+    border-radius:20px;
+}
+
+/* About */
+#about{
+    background:#ffffff;
+}
+
+#about h2{
+    color:#d62828;
+    margin-bottom:20px;
+}
+
+/* Cards */
+.card{
+    border:none;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.card img{
+    height:220px;
+    object-fit:cover;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Reviews */
+#reviews .card{
+    padding:15px;
+}
+
+/* FAQ */
+.accordion-button{
+    font-weight:bold;
+}
+
+/* Footer */
+footer{
+    margin-top:40px;
+}
+
+footer i{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+footer i:hover{
+    color:#ffc107;
+}
+
+/* Buttons */
+.btn{
+    border-radius:30px;
+    padding:10px 20px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.hero{
+    text-align:center;
+}
+
+.hero h1{
+    font-size:35px;
+}
+
+.hero img{
+    margin-top:30px;
+}
+
+.nav-link{
+    text-align:center;
+    margin-left:0;
+}
+
+.card{
+    margin-bottom:20px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="#">🍽 Foodie's</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#menu1">Menu</a></li>
+<li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+<li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+
+<li class="nav-item ms-lg-3">
+<a href="#" class="btn btn-warning">Order Now</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+</nav>
+
+<!-- Hero -->
+
+<section id="home" class="hero">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-md-6">
+
+<h1>Delicious Food Delivered Fresh</h1>
+
+<p>
+Enjoy fresh meals made with love and served with happiness.
+</p>
+
+<a href="#menu1" class="btn btn-danger btn-lg">
+Explore Menu
+</a>
+
+</div>
+
+<div class="col-md-6 text-center">
+<img src="https://tse1.mm.bing.net/th/id/OIP.N9Ex0TIBeiWRfIUf2LmwDAHaEK?r=0&pid=Api&P=0&h=180"
+class="img-fluid rounded shadow"
+alt="Restaurant">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- About -->
+
+<section id="about" class="container py-5 text-center">
+
+<h2>About Us</h2>
+
+<p>
+Foodie's Restaurant serves delicious, fresh, and hygienic meals made with quality ingredients.
+</p>
+
+</section>
+
+<!-- Featured Dishes -->
+
+<section id="menu1" class="container py-5">
+
+<h2 class="text-center mb-5">Featured Dishes</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+
+<div class="card h-100 shadow">
+
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80"
+class="card-img-top"
+alt="Pizza">
+
+<div class="card-body text-center">
+
+<h4>Margherita Pizza</h4>
+
+<p>Cheesy and delicious.</p>
+
+<h5>₹299</h5>
+
+<button class="btn btn-danger">Order</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card h-100 shadow">
+
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80"
+class="card-img-top"
+alt="Burger">
+
+<div class="card-body text-center">
+
+<h4>Classic Burger</h4>
+
+<p>Loaded with fresh veggies.</p>
+
+<h5>₹199</h5>
+
+<button class="btn btn-danger">Order</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card h-100 shadow">
+
+<img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=600&q=80"
+class="card-img-top"
+alt="Pasta">
+
+<div class="card-body text-center">
+
+<h4>Creamy Pasta</h4>
+
+<p>Italian special recipe.</p>
+
+<h5>₹249</h5>
+
+<button class="btn btn-danger">Order</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Testimonials -->
+
+<section id="reviews" class="bg-light py-5">
+
+<div class="container">
+
+<h2 class="text-center mb-4">Customer Reviews</h2>
+
+<div class="row">
+
+<div class="col-md-4">
+<div class="card">
+<div class="card-body">
+⭐⭐⭐⭐
+<p>Best pizza ever!</p>
+<b>Harshit</b>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card">
+<div class="card-body">
+⭐⭐⭐⭐⭐
+<p>Amazing service.</p>
+<b>Aashita</b>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card">
+<div class="card-body">
+⭐⭐⭐⭐⭐
+<p>Loved the pasta.</p>
+<b>Aman</b>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FAQ -->
+
+<section id="faq" class="container py-5">
+
+<h2 class="text-center mb-4">FAQ</h2>
+
+<div class="accordion">
+
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+
+<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#a1">
+
+Do you offer home delivery?
+
+</button>
+
+</h2>
+
+<div id="a1" class="accordion-collapse collapse show">
+
+<div class="accordion-body">
+
+Yes, we deliver within 30 minutes.
+
+</div>
+
+</div>
+
+</div>
+
+<div class="accordion-item">
+
+<h2 class="accordion-header">
+
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#a2">
+
+What are your opening hours?
+
+</button>
+
+</h2>
+
+<div id="a2" class="accordion-collapse collapse">
+
+<div class="accordion-body">
+
+10:00 AM to 11:00 PM
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="bg-dark text-white text-center p-4">
+
+<h4>Follow Us</h4>
+
+<!-- <i class="bi bi-facebook fs-3 m-2"></i> -->
+<i class="bi bi-instagram fs-3 m-2"></i>
+<!-- <i class="bi bi-twitter-x fs-3 m-2"></i> -->
+
+<p class="mt-3">© 2026 Foodie's Restaurant</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Website Loaded
+window.onload = function () {
+    console.log("Foodie's Restaurant Loaded Successfully!");
+};
+
+// Active Navigation
+const navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", function () {
+        navLinks.forEach(item => item.classList.remove("active"));
+        this.classList.add("active");
+    });
+});
+
+// Order Buttons
+const orderButtons = document.querySelectorAll("#menu1 .btn");
+
+orderButtons.forEach(button => {
+    button.addEventListener("click", function () {
+        alert("🍽️ Thank you! Your order has been placed.");
+    });
+});
+
+// Order Now Button
+const orderNow = document.querySelector(".btn-warning");
+
+orderNow.addEventListener("click", function () {
+    alert("Welcome! Browse our delicious menu.");
+});
+
+// Explore Menu Button
+const exploreBtn = document.querySelector(".btn-danger");
+
+exploreBtn.addEventListener("click", function () {
+    console.log("Exploring Menu...");
+});
+
+// Social Media Icons
+const icons = document.querySelectorAll("footer i");
+
+icons.forEach(icon => {
+    icon.addEventListener("click", function () {
+        alert("Follow us on social media!");
+    });
+});
+</script>
+
+</body>
+</html>

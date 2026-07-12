@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admission Form</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#b6b2ba,#8e8cef);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+    width:420px;
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+}
+
+label{
+    display:block;
+    margin-top:12px;
+    font-weight:bold;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+textarea{
+    resize:none;
+    height:80px;
+}
+
+.radio{
+    margin-top:8px;
+}
+
+.radio input{
+    width:auto;
+    margin-right:5px;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#4e2368;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#2b034f;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#44015d;
+    outline:none;
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>College Admission Form</h2>
+
+    <form>
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your full name" required>
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" required>
+        <label>Phone Number</label>
+        <input type="tel" placeholder="10-digit number" pattern="[0-9]{10}" required>
+        <label>Password</label>
+        <input type="password" placeholder="Create password" minlength="8" maxlength="12" required>
+        <label>Date of Birth</label>
+        <input type="date" required>
+        <label>Gender</label>
+        <div class="radio">
+            <input type="radio" name="gender" required> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+        </div>
+        <label>Course</label>
+        <select required>
+            <option value="">Select Course</option>
+            <option>CSE</option>
+            <option>AI</option>
+            <option>DS</option>
+            <option>IT</option>
+            <option>IOT</option>
+            <option>ECE</option>
+            <option>CSE</option>
+        </select>
+
+        <label>Address</label>
+        <textarea placeholder="Enter your address" required></textarea>
+        <label>Upload Marksheet</label>
+        <input type="file" required>
+        <label>
+            <input type="checkbox" required>
+            I agree to the terms and conditions.
+        </label>
+
+        <button type="submit">Submit Application</button>
+
+    </form>
+</div>
+</body>
+</html>
